@@ -9,14 +9,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>School Management - Charts</title>
+  <title>School Managment - List of subjects</title>
 
-  <!-- Custom fonts for this template-->
+  <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
+  <!-- Custom styles for this template -->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -55,7 +58,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pages</span>
@@ -75,24 +78,31 @@
       </li>
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <!-- Nav Item - Tables
+      <li class="nav-item active">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span>
+        </a>
+      </li>  -->
+
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLists" aria-expanded="true" aria-controls="collapseLists">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span>
         </a>
-        <div id="collapseLists" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseLists" class="collapse show" aria-labelledby="headingLists" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">List of:</h6>
             <a class="collapse-item" href="students.html">Students</a>
             <a class="collapse-item" href="teachers.html">Teachers</a>
-            <a class="collapse-item" href="subjects.html">Subjects</a>
+            <a class="collapse-item active" href="subjects.html">Subjects</a>
           </div>
         </div>
       </li>
@@ -195,73 +205,62 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-          <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization options, please visit the <a target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
-
-          <!-- Content Row -->
-          <div class="row">
-
-            <div class="col-xl-8 col-lg-7">
-
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the area chart can be found in the <code>/js/demo/chart-area-demo.js</code> file.
-                </div>
-              </div>
-
-              <!-- Bar Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
-                </div>
-              </div>
-
+		<!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-muted">List of subjects</h6>
             </div>
-
-            <!-- Donut Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Hexagon Chart</h6>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-light table-hover table-borderless " id="dataTable" width="100%" cellspacing="0">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Subject</th>
+                    </tr>
+                  </thead>
+                  <tfoot class="thead-light">
+                    <tr>
+                      <th>Subject</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                    <tr>
+                      <td>Rakoto</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success btn-icon-split text">
+                      <span class="icon text-white-50">
+                        <i class="fa fa-plus-square" aria-hidden="true"></i>
+                      </span>
+                      <span class="text">Add new subject</span>
+                  </a>
                 </div>
-                <!-- Card Body -->
-                <svg class="hexagon" viewBox="0 0 150 150">
-        <!-- main hexagon -->
-                  <polygon points="24,49 24,99 74,124 124,99 124,49 74,24" style="fill: transparent; stroke: #d0d0d0; stroke-width: 1"></polygon>
-                  <polygon points="49,61.25 74,49 99,61.25 99,86.5 74,99 49,86.5" style="fill: transparent; stroke: #d0d0d0; stroke-width: 1"></polygon>
-                  <!-- main hexagon extra lines -->
-                  <line x1="74" y1="24" x2="74" y2="124" style="stroke: #d0d0d0; stroke-width: 0.5"></line>
-                  <line x1="24" y1="49" x2="124" y2="99" style="stroke: #d0d0d0; stroke-width: 0.5"></line>
-                  <line x1="24" y1="99" x2="124" y2="49" style="stroke: #d0d0d0; stroke-width: 0.5"></line>
-                  <!-- stats hexagon --><polygon id="stats-hexagon" points="74,27.389830508475 114.67796610169,53.661016949153 99.423728813559,86.71186440678 74,78.237288135593 35.016949152542,93.491525423729 27.389830508475,50.694915254237" style="fill: #eee; fill-opacity: 0.5; stroke-opacity: 0.8; stroke: #dc0014;"></polygon>
-                  <text x="61" y="18" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Math</text>
-                  <text x="123" y="47" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Phy</text>
-                  <text x="123" y="112" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Sci</text>
-                  <text x="61" y="142" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Eng
-                  </text>
-                  <text x="1" y="47" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Fr</text>
-                  <text x="1" y="112" font-size="13" font-weight="bold" font-family="Open Sans, Arial">Philo</text>
-                </svg>
+              </div>
             </div>
           </div>
-
         </div>
         <!-- /.container-fluid -->
 
@@ -272,7 +271,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Devinbox 2020</span>
           </div>
         </div>
       </footer>
@@ -319,12 +318,11 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
